@@ -1,18 +1,24 @@
-<h1>New Website Ready</h1>
+{% extends "base.html" %}
 
-<p>Now working on website here</p>
+{% block content %}
 
-<p>The stuff here {{ a|safe }}</p>
+    <h1>New Website Ready</h1>
 
-<h1> New pizzas in the world: </h1>
+    <p>Now working on website here</p>
 
-{% for topping in pizzas %}
-    {% if topping == 41 %}
-        {{ topping + 100 }}
-    {% else %}
+    <p>The stuff here {{ a|safe }}</p>
 
-        {{topping}} <br>
-    {% endif %}
+    <h1> New pizzas in the world: </h1>
 
-{% endfor %}
+    {% for topping in pizzas %}
+        {% if topping == 41 %}
+            {{ topping + 100 }}
+        {% else %}
 
+            {{topping}} <br>
+        {% endif %}
+
+    {% endfor %}
+
+
+{% endblock %}

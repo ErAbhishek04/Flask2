@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 
-def first():
+def index():
     stuff = "my name is <strong >Abhi</strong>"
 
     pizzas =["peppr", "new" ,"old" ,"3" ,41]
